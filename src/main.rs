@@ -36,10 +36,10 @@ impl Component for Model {
     fn view(&self, ctx: &Context<Self>) -> Html {
         let link = ctx.link();
         html! {
-            <div>
-                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
-                <p>{ self.value }</p>
-                <button onclick={link.callback(|_| Msg::MinusOne)}>{ "-1" }</button>
+            <div class="content">
+                <button onclick={link.callback(|_| Msg::AddOne)} class="btn">{ "+1" }</button>
+                <p class="result">{ self.value }</p>
+                <button onclick={link.callback(|_| Msg::MinusOne)} class="btn">{ "-1" }</button>
             </div>
         }
     }
